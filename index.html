@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaishnavi Chavan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2c06461e12.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <nav>
+                <img src="Logo.png" width="190px" alt="Logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span>Vaishnavi</span> Chavan from Pune</h1>
+            </div>
+        </div>
+    </header>
+
+    <!------------------about-------------->
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Passport Photo.jpeg" alt="Passport Photo of Vaishnavi Chavan">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a recent engineering graduate from RMD Sinhgad Technical Institute, with a diploma in Electronics and Telecommunication (ENTC) from Government Polytechnic Aurangabad.</p>
+                    <p>Currently, I am enhancing my skills by studying Full-Stack Java Development. I have also completed a UI/UX design course from Great Learning, which has strengthened my design and user experience knowledge.</p>
+                    <p>Additionally, I have completed an internship in Embedded Systems at Vighnaharta Technologies Pvt Ltd, where I gained practical experience in detectors testing. I am eager to apply my skills and knowledge in a dynamic and innovative environment.</p>
+                    <p>Outside of my professional interests, I enjoy traveling to new places, trekking, and cooking for others. These hobbies allow me to explore different cultures, stay active, and share my love of food with friends and family.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'education')">Education</p>
+                        <p class="tab-links" onclick="opentab(event, 'skills')">Skills</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>2021-2024</span><br>B.E Electronic and Telecommunication<br>RMD Sinhgad Technical Institute<br>Savitribai Phule Pune University</li>
+                            <li><span>2021</span><br>Diploma in Electronics and Telecommunication<br>Government Polytechnic Aurangabad</li>
+                            <li><span>2017</span><br>SSC<br>MSBSHSE</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Programming Languages</span><br>C, Java, HTML, CSS, JavaScript</li>
+                            <li><span>Other</span><br>Figma, VS Code, Git, and GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-------------------------------services-------------------------->
+
+    <section id="services">
+        <div class="container">
+            <h1 class="sub-title">Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>UI/UX design with a strong foundation in creating user-centered web and app interfaces. Proficient in Figma, wireframing, and prototyping to enhance user engagement and experience.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Creating visually appealing, user-friendly interfaces. Proficient in HTML, CSS, and JavaScript to deliver seamless user experiences across devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------------contact---------->
+    <section id="contact">
+        <div class="container">
+            <h1 class="sub-title">Contact Me</h1>
+            <div class="row">
+                <div class="contact-left">
+                    <p><i class="fa-solid fa-paper-plane"></i> vaishnavichavan025@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 9011479545</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/vaishnavi-chavan-009413232/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="Vaishnavi Chavan.pdf" download class="btn btn2">Download Cv</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright @ 2024 Vaishnavi Chavan. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function opentab(event, tabname) {
+            const tablinks = document.getElementsByClassName("tab-links");
+            const tabcontents = document.getElementsByClassName("tab-contents");
+
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwl59y8_x5hr5ZFey-srXOPMo5hGygjTFPVBQUcYAEs0yqQ7dj2pY9bh_RG7dIwBtY/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                  msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+
+        
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+      <script>
+
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu() {
+    sidemenu.style.right = "0"; // Slide in menu
+}
+
+function closemenu() {
+    sidemenu.style.right = "-200px"; // Hide menu off-screen
+}
+      </script>
+</body>
+
+</html>
